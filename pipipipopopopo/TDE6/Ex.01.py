@@ -3,7 +3,7 @@ então coloque em um outro vetor de 4 posições o maior valor encontrado na col
 índice é o mesmo do vetor, ou seja, o maior valor da coluna zero da matriz na posição zero do vetor e 
 assim por diante. Mostre então a matriz, o vetor e a média aritmética do vetor.'''
 
-
+'''ehdgwrlkfhaljwrhflar'''
 m = [[1, 2, 3, 4],
      [5, 6, 7, 8],
      [9, 1, 2, 3],
