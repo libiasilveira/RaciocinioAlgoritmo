@@ -44,7 +44,7 @@ sum_c = 0
 print('\nMatriz C')
 for line in range(len(m)):
     for column in range(len(m[line])):
-        if line == (column + 1) or column == (line - 1) and line == (column - 1) or column == (line + 1) :
+        if line - column == 1 or column - line == 1:
             print(m[line][column], end=' | ')
             sum_c += m[line][column]
         else:
