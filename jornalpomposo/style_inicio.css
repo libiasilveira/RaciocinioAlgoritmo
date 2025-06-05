@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.titulo-jornal {
+  font-family: "Fredoka", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  top: 0;
+  left: 10px;
+}
+
+body {
+    font-family: "Titillium Web", sans-serif;
+    background-color: #f0fff4;
+    color: #333;
+
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #d9f8ec;
+  padding: 0.8rem 0;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  z-index: 100;
+}
+
+nav a {
+    color: #205c3b;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  padding: 6rem 2rem; 
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.noticia {
+  
+  background: #ffffff;
+  border: 2px solid #c4f0d9;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+  overflow: hidden;
+  padding: 6rem;
+}
+
+.noticia:hover {
+    transform: scale(1.01);
+}
+
+.noticia h2 {
+    color: #207050;
+    margin-top: 0;
+}
+
+.noticia p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    background-color: #b0eacd;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #205c3b;
+    margin-top: 2rem;
+}
+
+.botao {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
+    background-color: #88d4b2;
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #76c4a0;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    main {
+        padding: 1rem;
+        padding-top: 70px; /* mantém o espaçamento para nav fixo */
+    }
+}
