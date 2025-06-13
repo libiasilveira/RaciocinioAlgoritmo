@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Sour Gummy", sans-serif;
+  background: linear-gradient(15deg, #8db3e2 40%, #b58bd3 100%);
+  color: #1a1a2e;
+  line-height: 1.6;
+  padding-top: 5rem; /* para compensar o nav fixo */
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 6rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.1rem;
+  z-index: 999;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  background-color: #6b4faa;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  transition: background 0.5s;
+}
+
+nav a:hover {
+  background-color: #4a3c78;
+}
+
+section h1 {
+  font-size: 100px;
+  font-family: "Twinkle Star", cursive;
+}
+
+.apresentacao {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  max-width: 800px;
+  margin: auto;
+  color: #29293d;
+}
+
+.titulo-disciplinas {
+  text-align: center;
+  font-size: 3rem;
+  margin: 4rem 0 2rem;
+  color: #1f2b57;
+}
+
+summary {
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  color: #8856b2;
+}
+
+summary:hover {
+  color: #1f2b57;
+}
+
+details summary::marker {
+  content: '🩵';
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.disciplinas {
+  background-color: #fff;
+  color: #2e2e3a;
+  padding: 1.5rem;
+  border-left: 6px solid #8e6cc5;
+  margin: 1.5rem auto;
+  width: 500px;
+  min-height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  align-self: start;
+}
+
+footer {
+  background-color: #5c4795;
+  padding: 1rem;
+  text-align: center;
+  font-style: italic;
+  color: #fff;
+  margin-top: 3rem;
+  font-weight: 500;
+}
