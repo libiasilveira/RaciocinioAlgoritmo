@@ -1,0 +1,313 @@
+:root {
+  --cor-primaria-escura: #1a3408;
+  --cor-primaria-verde: #2d5016;
+  --cor-destaque-roxo: #6b46c1;
+  --cor-destaque-azul: #2563eb;
+  --cor-fundo-claro: #fdf6e3;
+  --cor-fundo-branco: #ffffff;
+  --cor-texto-escuro: #1f2937;
+  --cor-texto-medio: #374151;
+  --cor-texto-claro: #6b7280;
+  --cor-borda-clara: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--cor-texto-escuro);
+  background: var(--cor-fundo-claro);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.barra-navegacao {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--cor-borda-clara);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navegacao-conteudo {
+  display: flex;
+  justify-content: center;
+}
+
+.links-navegacao {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.links-navegacao a {
+  text-decoration: none;
+  color: var(--cor-texto-escuro);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  border: 2px solid var(--cor-borda-clara);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.links-navegacao a:hover {
+  background: var(--cor-primaria-verde);
+  border-color: var(--cor-primaria-verde);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(45, 80, 22, 0.3);
+}
+
+.destaque {
+  padding: 120px 0 80px;
+}
+
+.conteudo-destaque {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.imagem-destaque {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  width: 350px;
+  height: 280px;
+  border-radius: 10%;
+  object-fit: cover;
+  border: 4px solid var(--cor-primaria-verde);
+  box-shadow: 0 15px 35px rgba(26, 52, 8, 0.3);
+  transition: all 0.4s ease;
+}
+
+.avatar:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(26, 52, 8, 0.4);
+}
+
+.texto-destaque {
+  text-align: left;
+}
+
+.destaque h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--cor-texto-escuro);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.destaque-cor {
+  color: var(--cor-destaque-roxo);
+  position: relative;
+}
+
+.destaque p {
+  font-size: 1.3rem;
+  color: var(--cor-texto-medio);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.titulo-secao {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--cor-primaria-verde);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.titulo-secao::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cor-destaque-roxo), var(--cor-destaque-azul));
+  border-radius: 2px;
+}
+
+.grade-disciplinas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.cartao-disciplina {
+  background: var(--cor-fundo-branco);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  border: 2px solid var(--cor-borda-clara);
+  position: relative;
+  overflow: hidden;
+}
+
+.cartao-disciplina::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cor-primaria-verde), var(--cor-destaque-roxo));
+}
+
+.cartao-disciplina:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--cor-primaria-verde);
+}
+
+.cabecalho-disciplina {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.cartao-disciplina h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cor-primaria-escura);
+  margin: 0;
+  flex: 1;
+}
+
+.icone-disciplina {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+}
+
+.conteudo-disciplina p {
+  color: var(--cor-texto-medio);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.link-mais {
+  color: var(--cor-destaque-roxo);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.link-mais:hover {
+  color: var(--cor-primaria-escura);
+  transform: translateX(5px);
+}
+
+.projetos {
+  background: var(--cor-fundo-branco);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cartao-projeto {
+  background: var(--cor-fundo-claro);
+  border-radius: 20px;
+  padding: 3rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  border: 2px solid var(--cor-borda-clara);
+}
+
+.cartao-projeto:hover {
+  transform: translateY(-6px);
+  border-color: var(--cor-primaria-verde);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.cartao-projeto h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--cor-primaria-escura);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.cartao-projeto p {
+  color: var(--cor-texto-medio);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.imagem-projeto {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.icone-emoji {
+  font-size: 1.2em;
+}
+
+.rodape {
+  background: var(--cor-primaria-verde);
+  color: white;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.icones-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.icones-sociais a {
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+  padding: 10px;
+  border-radius: 30%;
+  width: 50px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icones-sociais a:hover {
+  transform: translateY(-3px);
+  color: var(--cor-destaque-roxo);
+  background: rgba(255, 255, 255, 0.2);
+}
