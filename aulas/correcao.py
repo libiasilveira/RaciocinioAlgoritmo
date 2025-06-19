@@ -1,1 +1,0 @@
-print('questão 1')
